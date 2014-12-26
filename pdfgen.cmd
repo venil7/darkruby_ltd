@@ -1,0 +1,1 @@
+phantomjs ./libs/rasterize.js http://localhost:8080/resume/ ./dist/resume/resume.pdf A4

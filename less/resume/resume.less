@@ -1,0 +1,128 @@
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  background-image: url(http://subtlepatterns.com/patterns/billie_holiday.png);
+}
+
+.container {
+  background-image: url(http://subtlepatterns.com/patterns/debut_light.png);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto Condensed", Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.2381em;
+  padding-bottom: 0;
+}
+
+.head {
+  h1 {
+    margin-bottom: 0;
+  }
+  h3 {
+    margin-top: 0;
+    .pdf {
+      opacity: 0.2;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  .social {
+    margin-top: 20px;
+    a {
+      i.fa {
+        font-size: 22px;
+      }
+      text-decoration: none;
+      font-family: "Roboto Condensed", Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      line-height: 0.7;
+    }
+    ul {
+      padding-left: 0px;
+    }
+  }
+}
+
+.label-default {
+  background-color: #bbb;
+}
+
+.label-pale {
+  padding-top: 0px;
+  border: 1px solid #aaa;
+  color: #aaa;
+}
+
+.label-pale:hover {
+  cursor: default;
+  border: 1px solid #999;
+  color: #999;
+}
+
+.label {
+  font-weight: normal;
+}
+
+/* PRINT DESIGN */
+
+@media print {
+  body {
+    font-family: Sans-serif;
+    font-size: 10px;
+    background-image: none;
+    line-height: 0.98;
+  }
+
+  .container {
+    background-image: none;
+  }
+
+  .head {
+    .social {
+      a {
+        font-size: 16px;
+        span {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  }
+
+  .label-default {
+    background-color: #eee;
+    border: none;
+    color: #333;
+    line-height: 100%;
+  }
+
+  .label-pale {
+    background-color: #eee;
+    border: none;
+    color: #333;
+  }
+
+  .hide-print {
+    display: none !important;
+  }
+
+  .show-print {
+    display: block !important;
+  }
+}
