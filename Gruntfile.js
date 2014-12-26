@@ -110,10 +110,19 @@ module.exports = function(grunt) {
           tasks: ['uglify']
         }
       },
+      copy: {
+        ico: {
+          files: [
+            // makes all src relative to cwd
+            {expand: true, cwd: 'images/', src: ['favicon.ico'], dest: 'dist/'},
+          ],
+        },
+      },
   });
 
  grunt.registerTask('build', [
   'less',
+  'copy:ico',
   'bowercopy',
   'htmlrefs']);
 
